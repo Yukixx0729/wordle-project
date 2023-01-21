@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Yuki's Wordle Game</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="wordle.css" />
+  </head>
+  <body>
+    <h1>Wordle Game</h1>
+    <nav>
+      <a href="rules.html">Rules</a>
+      <button id="refresh">Play again</button>
+      <button id="hint">Hint</button>
+    </nav>
+    <div id="answerBox">
+      <div class="try">
+        <span class="guess1"></span><span class="guess1"></span>
+        <span class="guess1"></span><span class="guess1"></span
+        ><span class="guess1"></span>
+      </div>
+      <div class="try">
+        <span class="guess2"></span><span class="guess2"> </span>
+        <span class="guess2"></span><span class="guess2"></span
+        ><span class="guess2"></span>
+      </div>
+      <div class="try">
+        <span class="guess3"></span><span class="guess3"></span>
+        <span class="guess3"></span><span class="guess3"></span
+        ><span class="guess3"></span>
+      </div>
+      <div class="try">
+        <span class="guess4"></span><span class="guess4"></span>
+        <span class="guess4"></span><span class="guess4"></span
+        ><span class="guess4"></span>
+      </div>
+      <div class="try">
+        <span class="guess5"></span><span class="guess5"></span>
+        <span class="guess5"></span><span class="guess5"></span
+        ><span class="guess5"></span>
+      </div>
+      <div class="try">
+        <span class="guess6"></span><span class="guess6"></span>
+        <span class="guess6"></span><span class="guess6"></span
+        ><span class="guess6"></span>
+      </div>
+    </div>
+    <div id="keyboard">
+      <div id="row1">
+        <button class="letters">Q</button>
+        <button class="letters">W</button>
+        <button class="letters">E</button>
+        <button class="letters">R</button>
+        <button class="letters">T</button>
+        <button class="letters">Y</button>
+        <button class="letters">U</button>
+        <button class="letters">I</button>
+        <button class="letters">O</button>
+        <button class="letters">P</button>
+      </div>
+      <div id="row2">
+        <button class="letters">A</button>
+        <button class="letters">S</button>
+        <button class="letters">D</button>
+        <button class="letters">F</button>
+        <button class="letters">G</button>
+        <button class="letters">H</button>
+        <button class="letters">J</button>
+        <button class="letters">K</button>
+        <button class="letters">L</button>
+      </div>
+      <div id="row3">
+        <button id="enter">Enter</button>
+        <button class="letters">Z</button>
+        <button class="letters">X</button>
+        <button class="letters">C</button>
+        <button class="letters">V</button>
+        <button class="letters">B</button>
+        <button class="letters">N</button>
+        <button class="letters">M</button>
+        <button id="del">Del</button>
+      </div>
+    </div>
+    <script src="wordle.js" async defer></script>
+  </body>
+</html>
