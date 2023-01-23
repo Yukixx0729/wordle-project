@@ -111,20 +111,24 @@ nav button {
 #red {
   background-color: Red;
   font-weight: bold;
+  color: white;
 }
 
 #ruleGreen {
   background-color: green;
   font-weight: bold;
+  color: white;
 }
 
 #ruleOrange {
   background-color: orange;
   font-weight: bold;
+  color: white;
 }
 #ruleGrey {
   background-color: grey;
   font-weight: grey;
+  color: white;
 }
 .winning {
   background-color: red;
@@ -132,4 +136,20 @@ nav button {
 
 .grey {
   background-color: grey;
+}
+
+@media only screen and (max-width: 600px) {
+  #keyboard button {
+    border-radius: 5px;
+    border: solid 1px black;
+    box-shadow: 3px 1px 1px rgb(239, 159, 159);
+    padding: 2px 8px 2px 8px;
+    height: 29px;
+    width: 29px;
+    background-color: white;
+    font-size: 10px;
+  }
+  #keyboard #enter {
+    width: 40px;
+  }
 }

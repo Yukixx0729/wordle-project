@@ -12976,8 +12976,10 @@ const validWords = [
 let answer =
   validWords[Math.floor(Math.random() * validWords.length)].split("");
 
+//for test only
 // let answer = ["F", "I", "R", "R", "Y"];
 console.log(answer);
+
 //nav btns
 const refresh = document.getElementById("refresh");
 refresh.addEventListener("click", function () {
@@ -13074,6 +13076,11 @@ function checkAnswer() {
           }
         } else {
           currentRow[rowIdx][i].classList.add("grey");
+          for (let letter of letters) {
+            if (letter.innerHTML === char) {
+              letter.style.backgroundColor = "grey";
+            }
+          }
         }
       });
       rowIdx++;
