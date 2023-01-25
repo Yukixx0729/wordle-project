@@ -26,9 +26,9 @@ Build the basic HTML frame with basic CSS style;
 
 Make the first guess working as the real game;
 
-Create an object to apply all the functions to the guess grid;
+Create an object(so that the guess can move to next one) to apply all the functions to the guess grid;
 
-Write the nav's function or HTML;
+Write the nav's function of HTML;
 
 Finalize with CSS styling;
 
