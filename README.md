@@ -31,3 +31,7 @@ Create an object to apply all the functions to the guess grid;
 Write the nav's function or HTML;
 
 Finalize with CSS styling;
+
+## Project page link
+
+https://yukixx0729.github.io/wordle-project/
