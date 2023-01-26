@@ -13032,7 +13032,6 @@ for (let letter of letters) {
 //delete button
 function deleteChar() {
   chars.pop();
-  console.log(chars);
   currentRow[rowIdx][chars.length].innerHTML = "";
 }
 delBtn.addEventListener("click", deleteChar);
@@ -13065,10 +13064,23 @@ function checkAnswer() {
       // check for correct letter
       chars.forEach((char, i) => {
         if (answerCopy[i] === char) {
+          for (let letter of letters) {
+            if (letter.innerHTML === char) {
+              letter.style.backgroundColor = "green";
+            }
+          }
           char = "";
           answerCopy[i] = "";
           currentRow[rowIdx][i].classList.add("green");
         } else if (answerCopy.includes(char)) {
+          for (let letter of letters) {
+            if (
+              letter.innerHTML === char &&
+              letter.style.backgroundColor != "green"
+            ) {
+              letter.style.backgroundColor = "orange";
+            }
+          }
           answerCopy[answerCopy.indexOf(char)] = "";
           char = "";
           if (!currentRow[rowIdx][i].classList.contains("green")) {
@@ -13077,7 +13089,11 @@ function checkAnswer() {
         } else {
           currentRow[rowIdx][i].classList.add("grey");
           for (let letter of letters) {
-            if (letter.innerHTML === char) {
+            if (
+              letter.innerHTML === char &&
+              letter.style.backgroundColor != "green" &&
+              letter.style.backgroundColor != "orange"
+            ) {
               letter.style.backgroundColor = "grey";
             }
           }
