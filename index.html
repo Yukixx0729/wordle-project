@@ -16,6 +16,7 @@
       <button id="refresh">Play again</button>
       <button id="hint">Hint</button>
     </nav>
+    <!-- <div id="record">Your goal🐣: <spam id="scores">0</spam></div> -->
     <div id="answerBox">
       <div class="try">
         <span class="guess1"></span><span class="guess1"></span>
@@ -84,6 +85,12 @@
         <button id="del">Del</button>
       </div>
     </div>
+    <audio id="myAudio">
+      <source src="winner.mp3" />
+    </audio>
+    <audio id="loser">
+      <source src="lose.mp3" />
+    </audio>
     <script src="wordle.js" async defer></script>
   </body>
 </html>

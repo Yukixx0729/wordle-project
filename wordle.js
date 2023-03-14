@@ -1,4 +1,3 @@
-//the list of word
 const validWords = [
   "AALII",
   "AARGH",
@@ -12972,9 +12971,10 @@ const validWords = [
   "ZYMES",
   "ZYMIC",
 ];
-//generate the correct word
 let answer =
   validWords[Math.floor(Math.random() * validWords.length)].split("");
+
+//generate the correct word
 
 //for test only
 // let answer = ["F", "I", "R", "R", "Y"];
@@ -12990,7 +12990,7 @@ hint.addEventListener(
   "click",
   function () {
     correctChar = prompt(
-      "What location of the word you want to know?(1-5) Only one chance",
+      "What positon of the word you want to know?(please type in 1-5) Only one chance",
       ""
     );
     alert(answer[correctChar - 1]);
@@ -13038,9 +13038,9 @@ delBtn.addEventListener("click", deleteChar);
 
 //enter button
 function checkAnswer() {
-  let answerCopy = JSON.parse(JSON.stringify(answer));
-
+  let click = 0;
   enterBtn.addEventListener("click", function () {
+    let answerCopy = JSON.parse(JSON.stringify(answer));
     if (chars.length < 5) {
       alert("Please fill out the word");
       return;
@@ -13052,16 +13052,23 @@ function checkAnswer() {
       }
 
       // win condition
+
       if (answerCopy.join("") === chars.join("")) {
         chars.forEach((char, i) =>
           currentRow[rowIdx][i].classList.add("winning")
         );
-        alert("Congrats! You made it! 🎆");
+        const winner = document.getElementById("myAudio");
+        setTimeout(() => {
+          alert("Congrats! You made it! 🎆");
+        }, 1000);
+        winner.play();
+
         delBtn.removeEventListener("click", deleteChar);
         return;
       }
 
       // check for correct letter
+
       chars.forEach((char, i) => {
         if (answerCopy[i] === char) {
           for (let letter of letters) {
@@ -13100,10 +13107,20 @@ function checkAnswer() {
         }
       });
       rowIdx++;
+      click++;
     }
     chars = [];
     answerCopy = JSON.parse(JSON.stringify(answer));
+    if (click === 6) {
+      const lose = document.getElementById("loser");
+      lose.play();
+      setTimeout(() => {
+        alert("The answer is " + answer.join(""));
+      }, 2000);
+    }
   });
 }
 
 checkAnswer();
+// record the goal
+const scores = document.getElementById("scores");

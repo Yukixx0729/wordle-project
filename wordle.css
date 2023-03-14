@@ -24,7 +24,7 @@ nav {
 }
 a {
   border: 1px solid salmon;
-  border-radius: 3px;
+  border-radius: 5px;
   box-shadow: 5px 3px 3px rgb(238, 205, 148);
   padding: 2px 5px 2px 5px;
   margin-right: 10px;
@@ -34,7 +34,7 @@ a {
 }
 nav button {
   border: 1px solid salmon;
-  border-radius: 3px;
+  border-radius: 5px;
   box-shadow: 5px 3px 3px rgb(238, 205, 148);
   padding: 2px 5px 2px 5px;
   margin-right: 10px;
@@ -43,6 +43,27 @@ nav button {
   color: darkviolet;
   font-family: "Sofia Sans", sans-serif;
   background-color: white;
+  transform: matrix3d();
+}
+
+a:hover {
+  cursor: pointer;
+}
+a:active {
+  box-shadow: none;
+  transform: translate3d(2px, 2px, 3px);
+}
+nav button:hover {
+  cursor: pointer;
+}
+nav button:active {
+  box-shadow: none;
+  transform: translate3d(2px, 2px, 3px);
+}
+/* record */
+#record {
+  margin-top: 20px;
+  font-size: 25px;
 }
 /* guess */
 .try {
@@ -84,7 +105,10 @@ nav button {
   width: 45px;
   background-color: white;
 }
-
+#keyboard button:active {
+  box-shadow: none;
+  transform: translate3d(2px, 2px, 3px);
+}
 .green {
   background-color: green;
 }
